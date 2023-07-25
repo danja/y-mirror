@@ -12,8 +12,8 @@ import * as map from 'lib0/map'
 */
 
 const ws = require('ws')
-const ws = require('http')
-const ws = require('lib0/map')
+const http = require('http')
+const map = require('lib0/map')
 
 const wsReadyStateConnecting = 0
 const wsReadyStateOpen = 1
