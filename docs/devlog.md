@@ -31,6 +31,26 @@ danny@danny-desktop:~/HKMS/codemirror$ ./node_modules/.bin/esbuild --minify --bu
 
 I've put in bin/build.sh
 
+# Server
+
+ 1983  npm install -g pm2
+ 1984  pm2 start server.js
+ 1985  pm2 save
+ 1986  pm2 update
+ 1987  pm2 startup
+ 1988  pm2 list
+ 1989  pm2 save
+ 1990  pm2 startup
+ 1991  pm2 list
+ 1992  systemctl enable pm2-root
+ 1993  pm2 list
+ 1994  pm2 start
+ 1995  pm2 start server.js
+ 1996  pm2 save
+ 1997  pm2 list
+ 1998  pm2 start server.js
+ 1999  pm2 list
+ 2000  pm2 logs server
 
 
 
