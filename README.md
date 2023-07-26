@@ -85,10 +85,9 @@ lists service statuses
 
 gives detailed status
 
+---
+danja reloading
 
-
-
-
-
-
+* local commit/push changes from vscode
+* server 
 
