@@ -37,7 +37,7 @@ const ydoc = new Y.Doc();
 const provider = new WebrtcProvider(
     'mozz',
     ydoc,
-    { signaling: ['ws://hyperdata.it:4444'] }
+    { signaling: ['wss://hyperdata.it:4444'] }
 )
 
 const ytext = ydoc.getText("codemirror");
