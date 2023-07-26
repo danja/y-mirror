@@ -55,27 +55,33 @@ There is example HTML/css code in demo/
 
 ## Server Installation
 
-I'm running Ubuntu 2022.04. 
+The server code is in /server
+
+Be aware of the host:port settings in both the client and server
+
+
+
+The following worked on Ubuntu 2022.04 
 
 Assuming you've done the setup above on the server, 
 
-sudo apt install pm2
+```sudo apt install pm2```
 
 cd to the /server directory
 
-pm2 start y-server.js 
+```pm2 start y-server.js```
 
 should get the service running
 
-pm2 save
+```pm2 save```
 
 records this state
 
-pm2 list
+```pm2 list```
 
 lists service statuses
 
-pm2 show y-server
+```pm2 show y-server```
 
 gives detailed status
 
