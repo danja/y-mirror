@@ -12,7 +12,8 @@ import * as map from 'lib0/map'
 */
 
 const ws = require('ws')
-const http = require('http')
+// const http = require('http')
+const https = require('https')
 const map = require('lib0/map')
 const fs = require('fs');
 
