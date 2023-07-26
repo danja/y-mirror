@@ -14,6 +14,19 @@ import * as map from 'lib0/map'
 const ws = require('ws')
 const http = require('http')
 const map = require('lib0/map')
+const fs = require('fs');
+
+// Load SSL/TLS certificates
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/fuseki.hyperdata.it/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/fuseki.hyperdata.it/fullchain.pem', 'utf8');
+const credentials = { key: privateKey, cert: certificate };
+
+// SSLCertificateFile /etc/letsencrypt/live/fuseki.hyperdata.it/fullchain.pem
+// SSLCertificateKeyFile /etc/letsencrypt/live/fuseki.hyperdata.it/privkey.pem
+
+const ws = require('ws')
+const http = require('http')
+const map = require('lib0/map')
 
 const wsReadyStateConnecting = 0
 const wsReadyStateOpen = 1
@@ -26,7 +39,8 @@ const port = process.env.PORT || 4444
 // @ts-ignore
 const wss = new ws.Server({ noServer: true })
 
-const server = http.createServer((request, response) => {
+// const server = http.createServer((request, response) => {
+const server = https.createServer(credentials, (request, response) => {
   response.writeHead(200, { 'Content-Type': 'text/plain' })
   response.end('okay')
 })
@@ -134,6 +148,10 @@ const onconnection = conn => {
   })
 }
 wss.on('connection', onconnection)
+
+/*
+This request has been blocked; this endpoint must be available over WSS.
+*/
 
 server.on('upgrade', (request, socket, head) => {
   // You may check auth of request here..
