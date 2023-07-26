@@ -59,7 +59,11 @@ The server code is in /server
 
 Be aware of the host:port settings in both the client and server
 
+- also http, ws vs. https, wss
 
+needed to 
+
+```npm install https```
 
 The following worked on Ubuntu 2022.04 
 
@@ -89,5 +93,12 @@ gives detailed status
 danja reloading
 
 * local commit/push changes from vscode
-* server 
+* server cd /home/hkms-apps/y-mirror
+```
+git pull
+cd bin
+./build.sh
+cd ../server
+pm2 stop y-server
+pm2 start yserver
 
