@@ -24,10 +24,6 @@ const credentials = { key: privateKey, cert: certificate };
 // SSLCertificateFile /etc/letsencrypt/live/fuseki.hyperdata.it/fullchain.pem
 // SSLCertificateKeyFile /etc/letsencrypt/live/fuseki.hyperdata.it/privkey.pem
 
-const ws = require('ws')
-const http = require('http')
-const map = require('lib0/map')
-
 const wsReadyStateConnecting = 0
 const wsReadyStateOpen = 1
 const wsReadyStateClosing = 2 // eslint-disable-line
