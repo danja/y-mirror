@@ -12,6 +12,8 @@ The system also needs an online service to at least initialize communications be
 
 This is work-in-progress, this seems as good a place as any to jot notes.
 
+*I got things working with a minimal wss server which worked on some clients but not others, so I finally have to bite the bullet and set up some testing. Googling brought up two particular systems that I've encountered before (I don't think used) : Selenium and [Cypress](https://docs.cypress.io/). 
+
 ## Installation/Client Component Generation
 
 The setup uses node/npm though the generated client component is plain Javascript and can be used in a HTML page without dependencies. The [esbuild](https://esbuild.github.io/) bundler is used.

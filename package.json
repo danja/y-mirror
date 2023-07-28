@@ -7,7 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "cypress:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "repository": {
     "type": "git",
@@ -32,6 +34,8 @@
     "yjs": "^13.6.7"
   },
   "devDependencies": {
-    "esbuild": "^0.18.16"
+    "cypress": "^12.17.2",
+    "esbuild": "^0.18.16",
+    "playwright-webkit": "1.34"
   }
 }
