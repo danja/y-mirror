@@ -146,9 +146,6 @@ const onconnection = conn => {
 }
 wss.on('connection', onconnection)
 
-/*
-This request has been blocked; this endpoint must be available over WSS.
-*/
 
 server.on('upgrade', (request, socket, head) => {
   // You may check auth of request here..

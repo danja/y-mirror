@@ -20,3 +20,24 @@ also
 
 https://www.browserstack.com/guide/cypress-safari-testing
 
+### UI
+
+npx cypress open
+
+### CLI 
+
+npx cypress run
+
+## Sockets
+
+https://github.com/lensesio/cypress-websocket-testing
+
+npm i -D @lensesio/cypress-websocket-testing
+
+npm i -D rxjs
+
+
+## Testing strategies
+
+
+
